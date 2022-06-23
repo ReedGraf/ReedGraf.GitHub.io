@@ -1,4 +1,24 @@
-/* Some CSS to make it look kinda ok */
+/* 
+      _         _
+     | |       | |
+  ___| |_ _   _| | ___   ___ ___ ___
+ / __| __| | | | |/ _ \ / __/ __/ __|
+ \__ \ |_| |_| | |  __/| (__\__ \__ \
+ |___/\__|\__, |_|\___(_)___|___/___/
+           __/ |
+          |___/
+
+*/
+
+/* -----------Fonts----------- */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+/* --------------------------- */
+
+:root {
+  --bgcolor1: #282828;
+  --bgcolor2: #202020;
+  --border1: #254ed6;
+}
 
 * {
   color: white;
@@ -6,11 +26,42 @@
 }
 
 .dark1 {
-  background-color: #333333;
+  background-color: var(--bgcolor1);
 }
 
-h1 {
-  font-weight: bold;
+/* ------Main Containers------ */
+#parent {
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px;
+}
+
+.child {
+  background-color: var(--bgcolor2);
+  border: 2px solid var(--border1);
+  box-shadow: 0px 0px 5px 2px var(--border1);
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  max-width: 100%;
+  height: auto;
+  /* grid-column: 1 / span 2; */
+}
+.child:hover {
+  box-shadow: 0px 0px 5px 5px var(--border1);
+  transform: scale(1.01, 1.01);
+}
+
+#leftChild {
+  padding: 3%;
+}
+/* --------------------------- */
+
+/* -------Element Types------- */
+h1,h2,h3,h4,h5 {
+  font-family: 'Comfortaa', cursive;
 }
 
 footer {
@@ -18,43 +69,33 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #414141;
+  background-color: var(--bgcolor2);
   color: white;
   text-align: center;
 }
 
-/* Fade in CSS */
-@keyframes fadeinall {
-    0% {
-      opacity: 1; }
-    97% {
-      opacity: 0; }
-    98% {
-      opacity: 0;
-      -webkit-transform: translateY(0);
-      transform: translateY(0); }
-    99% {
-      opacity: 0;
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%); }
-    100% {
-      opacity: 0;
-      z-index: -1; } }
-    #loader {
-      opacity: 1;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-      transform: translateY(0);
-      background-color: #333333;
-      z-index: 999;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-      -webkit-animation: fadeinall 1s normal both;
-      animation: fadeinall 1s normal both;
-      -webkit-animation-delay: 0.3s;
-      animation-delay: 0.3s; 
+hr {
+  width: 90%;
+  box-shadow: 0px 0px 3px 2px var(--border1);
 }
-/* Fade in CSS ends */
+/* --------------------------- */
+
+/* ------Link Formatting------ */
+a {
+  color: white;
+}
+a:visited {
+  color: #6d00d3;
+}
+a:hover {
+  color: #2f56da;
+}
+a:active {
+  color: #4a4aff;
+}
+/* --------------------------- */
+
+/* debugging stuff for positions */
+.border {
+  border: 2px solid red;
+}
