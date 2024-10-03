@@ -9,7 +9,9 @@
 
 var numberVar = 0;
 function doNothing() {
-  numberVar += 1;
-  console.log("ok x" + numberVar);
+  while (True) {
+    numberVar += 1;
+    console.log("ok x" + numberVar);
+  }
 }
-// It does nothing but count up, I just wanted to put something here.
+// It does nothing but count up for eternity, I just wanted to put something here.
